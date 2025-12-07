@@ -163,6 +163,7 @@ function stopTimer() {
   document.getElementById("timerDisplay").innerText = "0";
 }
 
+console.log("ROLES:", roles);
 
 function showimposters() {
   document.getElementById("timerScreen").classList.add("hidden");
