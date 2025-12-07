@@ -1,6 +1,39 @@
 let roles = [];
 let currentPlayer = 0;
 let countdownInterval;
+let roles = [];
+let currentPlayer = 0;
+let countdownInterval;
+let playerNames = [];
+
+function toggleNames() {
+  const box = document.getElementById("nameContainer");
+  box.classList.toggle("hidden");
+}
+
+function generateNameFields() {
+  const count = parseInt(document.getElementById("playerCount").value);
+  const container = document.getElementById("nameContainer");
+
+  container.innerHTML = ""; // clear old
+
+  playerNames = [];
+
+  for (let i = 0; i < count; i++) {
+    const input = document.createElement("input");
+    input.placeholder = "Player " + (i + 1) + " name";
+    input.className = "name-field";
+
+    // Store names dynamically
+    input.addEventListener("input", () => {
+      playerNames[i] = input.value || ("Player " + (i + 1));
+    });
+
+    container.appendChild(input);
+    playerNames.push("Player " + (i + 1));
+  }
+}
+
 
 function startGame() {
   const playerCount = parseInt(document.getElementById("playerCount").value);
@@ -23,13 +56,15 @@ function startGame() {
   }
 
   // Assign roles
-  roles = [];
-  for (let i = 0; i < playerCount; i++) {
-    roles.push({
-      isImpostor: impostorIndexes.includes(i),
-      word: impostorIndexes.includes(i) ? null : chosenWord
-    });
-  }
+ roles = [];
+for (let i = 0; i < playerCount; i++) {
+  roles.push({
+    isImpostor: impostorIndexes.includes(i),
+    word: impostorIndexes.includes(i) ? null : chosenWord,
+    name: playerNames[i] || ("Player " + (i + 1))
+  });
+}
+
 
   currentPlayer = 0;
   showReveal();
@@ -38,7 +73,8 @@ function startGame() {
 
 function showReveal() {
   document.getElementById("playerHeader").innerText =
-    "Player " + (currentPlayer + 1);
+  roles[currentPlayer].name;
+
 
   if (roles[currentPlayer].isImpostor) {
     document.getElementById("roleText").innerText = "IMPOSTOR";
