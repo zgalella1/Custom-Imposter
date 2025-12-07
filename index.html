@@ -1,42 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <title>Impostor Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="setup" class="screen">
-  <h1>Impostor Game</h1>
+  <div id="setupScreen" class="screen">
+    <h1>Impostor Game</h1>
 
-  <label># Players</label>
-  <input id="playerCount" type="number" value="5" min="3">
+    <label>Number of Players</label>
+    <input id="playerCount" type="number" value="5" min="3">
 
-  <label># Impostors</label>
-  <input id="impostorCount" type="number" value="1" min="1">
+    <button onclick="openPlayerList()">Edit Player Names</button>
 
-  <label>Discussion Timer (seconds)</label>
-  <input id="timerLength" type="number" value="90" min="10">
+    <label>Number of Impostors</label>
+    <input id="impostorCount" type="number" value="1" min="1">
 
-  <label>Word List</label>
-  <textarea id="wordList" rows="5">apple, castle, astronaut, coffee, concert</textarea>
+    <label>Word List</label>
+    <textarea id="wordList">apple
+chair
+bottle
+sandwich
+camera</textarea>
 
-  <button onclick="startGame()">Start Game</button>
-</div>
+    <label>Impostor Fake Word</label>
+    <input id="fakeWord" type="text" value="????">
 
-<div id="reveal" class="screen hidden">
-  <h2 id="playerHeader"></h2>
-  <h1 id="roleText"></h1>
-  <button onclick="nextPlayer()">Next</button>
-</div>
+    <button onclick="startGame()">Start Game</button>
+  </div>
 
-<div id="timer" class="screen hidden">
-  <h1>Discussion Timer</h1>
-  <div id="countdown" class="big"></div>
-  <button onclick="restart()">New Game</button>
-</div>
 
-<script src="script.js"></script>
+  <!-- Player List Screen -->
+  <div id="playerListScreen" class="screen hidden">
+    <h2>Player Names</h2>
+
+    <div id="playerList"></div>
+
+    <button onclick="addPlayer()">Add Player</button>
+    <button onclick="closePlayerList()">Done</button>
+  </div>
+
+
+  <!-- Reveal Role Screen -->
+  <div id="revealScreen" class="screen hidden">
+    <h2 id="playerHeader"></h2>
+    <p id="roleText"></p>
+
+    <button onclick="nextPlayer()">Next</button>
+  </div>
+
+
+  <!-- Timer Screen -->
+  <div id="timerScreen" class="screen hidden">
+    <h2>Discussion Timer</h2>
+    <div id="timerDisplay">60</div>
+
+    <button id="showImpostorsBtn" class="hidden" onclick="showImpostors()">Reveal Impostors</button>
+  </div>
+
+
+  <!-- Final Reveal Screen -->
+  <div id="finalScreen" class="screen hidden">
+    <h2>Impostors</h2>
+    <div id="impostorList"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
