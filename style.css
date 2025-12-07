@@ -1,101 +1,40 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   padding: 20px;
+  text-align: center;
+  background: #f4f4f4;
 }
 
 .screen {
-  max-width: 450px;
+  max-width: 400px;
   margin: auto;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .hidden {
   display: none;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 0;
-}
-
-label {
-  font-weight: bold;
-  display: block;
-  margin-top: 15px;
-}
-
-input, textarea, button {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-textarea {
-  height: 80px;
-  resize: vertical;
-}
-
 button {
-  background: #2d7df4;
-  color: white;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+  width: 100%;
+  padding: 15px;
   margin-top: 20px;
-  transition: 0.15s;
+  background: #007BFF;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
-button:hover {
-  background: #1b5fcc;
-}
-
-.start {
-  background: #2dc97b;
-}
-
-.start:hover {
-  background: #1da360;
-}
-
-#nameContainer {
-  margin-top: 15px;
-}
-
-.name-field {
+textarea, input {
   width: 100%;
   padding: 10px;
-  margin: 8px 0;
+  margin-top: 5px;
   border-radius: 8px;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
 }
 
-#roleCard {
-  margin-top: 25px;
-  padding: 40px;
-  background: #e9e9e9;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
-}
-
-#roleText {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#countdown {
+.big {
   font-size: 60px;
-  text-align: center;
-  margin: 20px 0;
   font-weight: bold;
+  margin: 40px 0;
 }
-
