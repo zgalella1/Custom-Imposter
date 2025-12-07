@@ -42,3 +42,8 @@ button {
   font-size: 60px;
   margin-top: 20px;
 }
+
+#roleText {
+  font-size: 28px;
+  margin: 20px 0;
+}
