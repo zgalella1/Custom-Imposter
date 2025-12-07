@@ -1,42 +1,73 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  padding: 20px;
-  text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: #f4f4f4;
+  padding: 20px;
 }
 
 .screen {
-  max-width: 400px;
+  max-width: 450px;
   margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .hidden {
   display: none;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background: #007BFF;
-  border: none;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
+h1 {
+  text-align: center;
+  margin-top: 0;
 }
 
-textarea, input {
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+input, textarea, button {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 6px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
-.big {
-  font-size: 60px;
-  font-weight: bold;
-  margin: 40px 0;
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+button {
+  background: #2d7df4;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.15s;
+}
+
+button:hover {
+  background: #1b5fcc;
+}
+
+.start {
+  background: #2dc97b;
+}
+
+.start:hover {
+  background: #1da360;
+}
+
+#nameContainer {
+  margin-top: 15px;
 }
 
 .name-field {
@@ -44,5 +75,27 @@ textarea, input {
   padding: 10px;
   margin: 8px 0;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
 }
+
+#roleCard {
+  margin-top: 25px;
+  padding: 40px;
+  background: #e9e9e9;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+#roleText {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#countdown {
+  font-size: 60px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
