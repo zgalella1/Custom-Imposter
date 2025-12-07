@@ -1,0 +1,40 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.screen {
+  max-width: 400px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #007BFF;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.big {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 40px 0;
+}
